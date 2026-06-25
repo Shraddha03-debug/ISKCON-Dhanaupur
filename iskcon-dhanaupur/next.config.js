@@ -5,7 +5,25 @@ const nextConfig = {
     root: __dirname,
   },
   images: {
-    domains: ['localhost'],
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.ngrok-free.dev',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.ngrok-free.app',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.ngrok.app',
+      },
+    ],
   },
   allowedDevOrigins: [
     'astute-elliptic-speed.ngrok-free.dev',
